@@ -3,6 +3,9 @@
  */
 
 package com.mycompany.tubesduasetengahjawa;
+
+import jenisbuku.Kamus;
+
 /**
  *
  * @author USER
@@ -10,7 +13,7 @@ package com.mycompany.tubesduasetengahjawa;
 public class Tubesduasetengahjawa {
 
     public static void main(String[] args) { //curently testing
-        Librarian missHoney = new Librarian("sue", "Sue",
+        /*Librarian missHoney = new Librarian("sue", "Sue",
             "-san", "2001-01-01",
             "ur home", "maw tau ajh");
         Anggota kangPinjem = new Anggota("suii", "Siti",     //constructor
@@ -37,6 +40,12 @@ public class Tubesduasetengahjawa {
         kangPinjem.pinjamBuku(laskarPelangi);
         missHoney.pengembalianBuku(kangPinjem, "Laskar Pelangi");
         System.out.println(laskarPelangi.getStatusPinjam());
-        System.out.println(laskarPelangi.riwayatPinjam[0]);
+        System.out.println(laskarPelangi.riwayatPinjam[0]);*/
+        
+        Kamus IndoJawa = new Kamus("Kamus Indo Jawa",         //constructor
+            "INDOJAWA", "John M. Echols",
+            "Gramedia", 2008);
+        IndoJawa.setBahasa("Indo", "Jawa");
+        System.out.println(IndoJawa.getKodeBuku());
     }
 }

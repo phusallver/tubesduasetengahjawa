@@ -4,6 +4,7 @@
  */
 package com.mycompany.tubesduasetengahjawa;
 import java.time.LocalDateTime;
+import java.util.Random;
 /**
  *
  * @author USER
@@ -12,24 +13,26 @@ public class Buku {
     //attribut
     private String idBuku;
     private String judulBuku;
-    private String kodeBuku;
+    protected String kodeBuku;
     private String pengarangBuku;
     private String penerbitBuku;
     private int tahunTerbit;
     private String statusPinjam;
     public String[] riwayatPinjam = new String[10];
+    Random rnm = new Random();
     
     //method
     public Buku(String idBuku,String judulBuku,         //constructor
-            String kodeBuku, String pengarangBuku,
-            String penerbitBuku, int tahunTerbit){
+            String pengarangBuku,String penerbitBuku, 
+            int tahunTerbit){
         this.idBuku = idBuku;
         this.judulBuku = judulBuku;
-        this.kodeBuku = kodeBuku;
         this.pengarangBuku = pengarangBuku;
         this.penerbitBuku = penerbitBuku;
         this.tahunTerbit = tahunTerbit;
         this.statusPinjam = "Tersedia";
+        int numb = rnm.nextInt(999999);
+        this.kodeBuku = String.format("%06d",numb);
     }
     public String getIDBuku(){
         return this.idBuku;
@@ -41,6 +44,7 @@ public class Buku {
         return this.statusPinjam;
     }
     public String getKodeBuku(){
+        
         return this.kodeBuku;
     }
     public String getPengarangBuku(){
