@@ -47,5 +47,6 @@ public class Tubesduasetengahjawa {
             "Gramedia", 2008);
         IndoJawa.setBahasa("Indo", "Jawa");
         System.out.println(IndoJawa.getKodeBuku());
+        
     }
 }

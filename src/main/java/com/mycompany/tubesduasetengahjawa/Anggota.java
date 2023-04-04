@@ -8,7 +8,7 @@ package com.mycompany.tubesduasetengahjawa;
  *
  * @author USER
  */
-public class Anggota {
+public abstract class Anggota {
     //attribut
     private String idAnggota;
     private String namaDepan;
@@ -59,5 +59,6 @@ public class Anggota {
         }else{
             System.out.println("Buku sedang tidak tersedia");
         }
-    }   
+    }
+    public abstract void extendDurasi(Buku buku);
 }

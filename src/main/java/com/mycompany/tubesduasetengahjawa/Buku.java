@@ -18,8 +18,10 @@ public class Buku {
     private String penerbitBuku;
     private int tahunTerbit;
     private String statusPinjam;
+    private String waktuKembali;
     public String[] riwayatPinjam = new String[10];
     Random rnm = new Random();
+    private int denda;
     
     //method
     public Buku(String idBuku,String judulBuku,         //constructor
@@ -60,9 +62,12 @@ public class Buku {
         LocalDateTime waktu = LocalDateTime.now();
         String waktuString = waktu.toString().substring(0,10);
         if (this.statusPinjam == "Terpinjam"){
+            this.waktuKembali = null;
             this.riwayatPinjam[0] += " - " + waktuString;
             this.statusPinjam = "Tersedia";
         }else if(this.statusPinjam == "Tersedia"){
+            LocalDateTime waktuBalik = waktu.plusDays(7);
+            this.waktuKembali = waktuBalik.toString().substring(0,10);
             for(int i = 8; i>-1; i--){
                 this.riwayatPinjam[i] = this.riwayatPinjam[i+1];
             }
