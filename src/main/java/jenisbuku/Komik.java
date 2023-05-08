@@ -14,8 +14,8 @@ import com.mycompany.tubesduasetengahjawa.GenerateCode;
 public class Komik extends Buku implements GenerateCode{
     private String genre;
 
-    public Komik(String idBuku, String judulBuku, String pengarangBuku, String penerbitBuku, int tahunTerbit) {
-        super(idBuku, judulBuku, pengarangBuku, penerbitBuku, tahunTerbit);
+    public Komik(String judulBuku, String pengarangBuku, String penerbitBuku, int tahunTerbit) {
+        super(judulBuku, pengarangBuku, penerbitBuku, tahunTerbit);
     }
     public void setGenre(String genre){
         this.genre = genre;

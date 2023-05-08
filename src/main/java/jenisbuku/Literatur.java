@@ -14,8 +14,8 @@ import com.mycompany.tubesduasetengahjawa.GenerateCode;
 public class Literatur extends Buku implements GenerateCode{
     private String tema;
 
-    public Literatur(String idBuku, String judulBuku, String pengarangBuku, String penerbitBuku, int tahunTerbit) {
-        super(idBuku, judulBuku, pengarangBuku, penerbitBuku, tahunTerbit);
+    public Literatur(String judulBuku, String pengarangBuku, String penerbitBuku, int tahunTerbit) {
+        super(judulBuku, pengarangBuku, penerbitBuku, tahunTerbit);
     }
     public void getTema(String tema){
         this.tema = tema;

@@ -47,7 +47,7 @@ public abstract class Anggota {
         return this.alamat;
     }
     public void pinjamBuku(Buku buku){
-        if (buku.getStatusPinjam() == "Tersedia"){
+        if (buku.getStatusPinjam().contains("tersedia")){
             if (this.quotaPeminjaman > 0){
                 this.bukuPinjaman[3-this.quotaPeminjaman] = buku;
                 this.quotaPeminjaman--;

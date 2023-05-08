@@ -4,7 +4,8 @@
 
 package com.mycompany.tubesduasetengahjawa;
 
-import jenisbuku.Kamus;
+import jenisbuku.Novel;
+import java.util.Scanner;
 
 /**
  *
@@ -13,40 +14,51 @@ import jenisbuku.Kamus;
 public class Tubesduasetengahjawa {
 
     public static void main(String[] args) { //curently testing
-        /*Librarian missHoney = new Librarian("sue", "Sue",
-            "-san", "2001-01-01",
-            "ur home", "maw tau ajh");
-        Anggota kangPinjem = new Anggota("suii", "Siti",     //constructor
-            "nurafifa", "2013-02-03",
-            "my home", "tau dong");
-        Buku laskarPelangi = new Buku("FIK1232","Laskar Pelangi",         //constructor
-            "LSKRPLNGi", "Andrea Hirata",
-            "Gramedia", 2008);
-        Buku sangPemimpi = new Buku("FIK1232","Sang Pemimpi",         //constructor
-            "LSKRPLNGi", "Andrea Hirata",
-            "Gramedia", 2008);
-        Buku edensor = new Buku("FIK1232","Edensor",         //constructor
-            "LSKRPLNGi", "Andrea Hirata",
-            "Gramedia", 2008);
-        Buku heriPoter = new Buku("FIK1232","Heripoter",         //constructor
-            "LSKRPLNGi", "Andrea Hirata",
-            "Gramedia", 2008);
-        kangPinjem.pinjamBuku(laskarPelangi);
-        kangPinjem.pinjamBuku(sangPemimpi);
-        kangPinjem.pinjamBuku(edensor);
-        kangPinjem.pinjamBuku(heriPoter);
-        System.out.println(laskarPelangi.getStatusPinjam());
-        System.out.println(laskarPelangi.riwayatPinjam[0]);
-        kangPinjem.pinjamBuku(laskarPelangi);
-        missHoney.pengembalianBuku(kangPinjem, "Laskar Pelangi");
-        System.out.println(laskarPelangi.getStatusPinjam());
-        System.out.println(laskarPelangi.riwayatPinjam[0]);*/
+        System.out.println("========================");
+        System.out.println("=====Login Sebagai======");
+        System.out.println("==1. pustakawan       ==");
+        System.out.println("==2. staff            ==");
+        System.out.println("==3. murid            ==");
+        System.out.println("========================");
+        /*
+        Scanner myObj = new Scanner(System.in);
+        String pilihan = myObj.nextLine();
         
-        Kamus IndoJawa = new Kamus("Kamus Indo Jawa",         //constructor
-            "INDOJAWA", "John M. Echols",
-            "Gramedia", 2008);
-        IndoJawa.setBahasa("Indo", "Jawa");
-        System.out.println(IndoJawa.getKodeBuku());
+        Librarian user1 = new Librarian("iukuk", "ukno",
+                "rifers", "23/2/1995",
+                "Home", "085712344321");
+        Staff user2 = new Staff("iykyk","ano",
+                "ne","25/12/2000",
+                "Homa","08923812923","boss");
+        Student user3 = new Student("iynyn","ina",
+                "kuta","5/5/2000",
+                "Hima","082198762345");
+        */
+        Perpus perpus = new Perpus();
+        perpus.tambahBuku(new Novel("Maryamah Karpov", "Andrea Hirata", "Bentang", 2008));
+        perpus.tambahBuku(new Novel("Padang Bulan", "Andrea Hirata", "Bentang", 2010));
+        perpus.tambahBuku(new Novel("Sebelas Ptriot", "Andrea Hirata", "Bentang", 2011));
+        perpus.tambahBuku(new Novel("Laskar Pelangi", "Andrea Hirata", "Bentang", 2005));
+        perpus.tambahBuku(new Novel("Sang Pemimpi", "Andrea Hirata", "Bentang", 2006));
+        perpus.tambahBuku(new Novel("Edensor", "Andrea Hirata", "Bentang", 2007));
+        perpus.tambahBuku(new Novel("Cinta di Dalam Gelas", "Andrea Hirata", "Bentang", 2011));
+        perpus.tambahBuku(new Novel("Orang-Orang Biasa", "Andrea Hirata", "Bentang", 2019));
         
+        perpus.printLisBuku();
+        System.out.println("\nBuku setelah diurut :\n");
+        perpus.urutkanSesuaiTahunTerbit();
+        perpus.printLisBuku();
+        
+        /*switch(pilihan){
+            case "1" :
+                user1.yuai(perpus);
+                break;
+            case "2" :
+                user2.yuai(perpus, user1);
+                break;
+            case "3" :
+                user3.yuai(perpus, user1);
+                break;
+        }*/
     }
 }

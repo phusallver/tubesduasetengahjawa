@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.tubesduasetengahjawa;
+import java.util.Scanner;
+import jenisbuku.Novel;
 
 /**
  *
@@ -53,7 +55,7 @@ public class Librarian {
         //update status buku
         //update quota pinjam
         if (anggota.bukuPinjaman[0]!=null){
-            if(anggota.bukuPinjaman[0].getJudulBuku() == judulBuku){
+            if(anggota.bukuPinjaman[0].getJudulBuku().contains(judulBuku)){
                 anggota.bukuPinjaman[0].updateStatusBuku();
                 anggota.bukuPinjaman[0] = anggota.bukuPinjaman[1];
                 anggota.bukuPinjaman[1] = anggota.bukuPinjaman[2];
@@ -61,14 +63,14 @@ public class Librarian {
                 anggota.quotaPeminjaman--;
             }
         }else if(anggota.bukuPinjaman[1]!=null){
-            if(anggota.bukuPinjaman[1].getJudulBuku() == judulBuku){
+            if(anggota.bukuPinjaman[1].getJudulBuku().contains(judulBuku)){
                 anggota.bukuPinjaman[1].updateStatusBuku();
                 anggota.bukuPinjaman[1] = anggota.bukuPinjaman[2];
                 anggota.bukuPinjaman[2] = null;
                 anggota.quotaPeminjaman--;
             }
         }else if(anggota.bukuPinjaman[2]!=null){
-            if(anggota.bukuPinjaman[2].getJudulBuku() == judulBuku){
+            if(anggota.bukuPinjaman[2].getJudulBuku().contains(judulBuku)){
                 anggota.bukuPinjaman[2].updateStatusBuku();
                 anggota.bukuPinjaman[2] = null;
                 anggota.quotaPeminjaman--;
@@ -76,6 +78,28 @@ public class Librarian {
         }else{
             System.out.println("Buku belum terpinjam");
         }
+    }
+    public void yuai(Perpus perpus){
+        menu();
+        Scanner myObj = new Scanner(System.in);
+        String pilihan = myObj.nextLine();
+        while(!pilihan.contains("0")){
+            switch (pilihan){
+                case "1" :/*
+                    perpus.lisBuku[7] = new Novel("Orang-Orang Biasa", "Andrea Hirata", "Bentang", 2019);
+                    break;*/
+            }
+            menu();
+            pilihan = myObj.nextLine();
+        }
+    }
+    public void menu(){
+        System.out.println("========================");
+        System.out.println("=======Pilih Menu=======");
+        System.out.println("==1. tambah buku      ==");
+        System.out.println("==2. hapus buku       ==");
+        System.out.println("==3. kembalikan buku  ==");
+        System.out.println("========================");        
     }
 }
 

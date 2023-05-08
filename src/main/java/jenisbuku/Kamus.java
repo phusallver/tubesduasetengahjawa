@@ -15,8 +15,8 @@ public class Kamus extends Buku implements GenerateCode{
     private String bahasa1;
     private String bahasa2;
 
-    public Kamus(String idBuku, String judulBuku, String pengarangBuku, String penerbitBuku, int tahunTerbit) {
-        super(idBuku, judulBuku, pengarangBuku, penerbitBuku, tahunTerbit);
+    public Kamus(String judulBuku, String pengarangBuku, String penerbitBuku, int tahunTerbit) {
+        super(judulBuku, pengarangBuku, penerbitBuku, tahunTerbit);
         GenerateCode();
     }
     public void setBahasa(String bahasa1, String bahasa2){
