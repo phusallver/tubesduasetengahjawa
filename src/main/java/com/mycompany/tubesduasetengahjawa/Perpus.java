@@ -30,6 +30,9 @@ public class Perpus {
     public void urutkanSesuaiTahunTerbit(){
         Collections.sort(lisBuku, new NamaComparator());
     }
+    public void urutkanSesuaiNama(){
+        Collections.sort(lisBuku);
+    }
     public void printLisBuku(){
         System.out.println("Berikut daftar lis buku : ");
         int i = 1;

@@ -45,8 +45,12 @@ public class Tubesduasetengahjawa {
         perpus.tambahBuku(new Novel("Orang-Orang Biasa", "Andrea Hirata", "Bentang", 2019));
         
         perpus.printLisBuku();
-        System.out.println("\nBuku setelah diurut :\n");
+        System.out.println("\nBuku setelah diurut berdasarkan Tahun Terbit:\n");
         perpus.urutkanSesuaiTahunTerbit();
+        perpus.printLisBuku();
+        
+        System.out.println("\nBuku setelah diurut berdasarkan Judul Buku:\n");
+        perpus.urutkanSesuaiNama();
         perpus.printLisBuku();
         
         /*switch(pilihan){

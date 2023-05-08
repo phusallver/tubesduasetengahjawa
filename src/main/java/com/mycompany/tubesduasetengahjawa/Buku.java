@@ -9,7 +9,7 @@ import java.util.Random;
  *
  * @author USER
  */
-public class Buku {
+public class Buku implements Comparable<Buku> {
     //attribut
     private String judulBuku;
     protected String kodeBuku;
@@ -69,5 +69,9 @@ public class Buku {
             this.riwayatPinjam[0] = waktuString;
             this.statusPinjam = "terpinjam";
         }
+    }
+    @Override
+    public int compareTo(Buku o) {
+        return this.judulBuku.compareTo(o.getJudulBuku());
     }
 }
